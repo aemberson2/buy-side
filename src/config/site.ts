@@ -136,7 +136,7 @@ export const site = {
     {
       question: "Do you find deals for me?",
       answer:
-        "No. There are plenty of good listings on BizBuySell and the other marketplaces. I help you tell which ones are worth your time and how to get the broker to take you seriously.",
+        "No, and that's on purpose. There are thousands of businesses listed publicly on BizBuySell and the other marketplaces at any given moment. Finding deals is not the hard part. I help you tell which ones are worth your time, get the broker to take you seriously, and work the process. If you want off-market deals sourced for you, that's a different service, it costs many thousands of dollars, and I'm not it.",
     },
     {
       question: "Can I just buy a Deal Call and nothing else?",
