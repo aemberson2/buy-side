@@ -1,0 +1,29 @@
+---
+/**
+ * Neutral placeholder block holding the exact spot and ratio for a real photo.
+ * When the photo arrives: replace this component usage with an <img> using the
+ * same class and the alt text passed here.
+ */
+interface Props {
+  alt: string;
+  /** CSS aspect-ratio value, e.g. "4 / 5". */
+  ratio?: string;
+  class?: string;
+}
+
+const { alt, ratio = "4 / 5", class: className = "" } = Astro.props;
+---
+
+<div
+  class:list={[
+    "flex w-full items-center justify-center border border-dashed border-ink/25 bg-ink/5",
+    className,
+  ]}
+  style={`aspect-ratio: ${ratio};`}
+  role="img"
+  aria-label={alt}
+>
+  <span class="placeholder-value px-3 py-1 text-center text-sm text-ink-soft">
+    [PHOTO: {alt}]
+  </span>
+</div>

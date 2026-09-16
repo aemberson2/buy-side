@@ -1,0 +1,139 @@
+---
+import { site } from "../../config/site";
+
+const columns = [
+  "Buy-side advisors",
+  "Buying programs",
+  "Courses and communities",
+  "Doing it alone",
+  site.name,
+];
+
+const rows = [
+  {
+    label: "What it costs",
+    cells: [
+      "$100,000+ (monthly retainer plus a percentage at close)",
+      "$10,000 to $20,000 upfront",
+      "$1,000 to $15,000",
+      "$0, plus whatever you get wrong",
+      "$27 to a few thousand, depending on what you use",
+    ],
+  },
+  {
+    label: "Who you actually talk to",
+    cells: [
+      "An advisor or their analyst",
+      "A coach or a community",
+      "A video",
+      "Nobody",
+      "A licensed broker who works deals every day",
+    ],
+  },
+  {
+    label: "Do they find deals for you",
+    cells: [
+      "Yes",
+      "Sometimes (filtered marketplace listings)",
+      "No",
+      "No",
+      "No",
+    ],
+  },
+  {
+    label: "Do they get paid when you close",
+    cells: ["Yes, a percentage", "No", "No", "No", "No. Same fee either way"],
+  },
+  {
+    label: "Do you commit before you've found anything",
+    cells: [
+      "Yes, months of retainer",
+      "Yes, full program fee upfront",
+      "Yes",
+      "No",
+      "No. Start with a $150 call",
+    ],
+  },
+  {
+    label: "Do they know what the broker on the other side is thinking",
+    cells: ["Sometimes", "Rarely", "No", "No", "Yes. I am one"],
+  },
+];
+---
+
+<section id="compare" class="border-y border-line bg-ink py-16 text-paper md:py-24">
+  <div class="fade-in-section mx-auto max-w-[1100px] px-4 sm:px-6">
+    <h2
+      class="max-w-3xl font-serif text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+    >
+      There are a lot of ways to get help buying a business. Here's how they
+      line up.
+    </h2>
+    <p class="mt-4 max-w-prose text-lg leading-relaxed text-paper-soft">
+      The expensive options are expensive because they find deals for you. If
+      you're willing to search the marketplaces yourself, you don't need to pay
+      for that.
+    </p>
+
+    <div class="mt-12 -mx-4 overflow-x-auto px-4 sm:-mx-6 sm:px-6">
+      <table class="w-full min-w-[860px] border-collapse text-left text-sm">
+        <thead>
+          <tr>
+            <th scope="col" class="border-b border-line-dark py-4 pr-4 align-bottom font-medium text-paper-soft">
+              <span class="sr-only">Comparison</span>
+            </th>
+            {
+              columns.map((column, i) => (
+                <th
+                  scope="col"
+                  class:list={[
+                    "border-b border-line-dark py-4 pr-4 align-bottom font-serif text-base font-semibold",
+                    i === columns.length - 1
+                      ? "border-b-2 border-accent text-paper"
+                      : "text-paper-soft",
+                  ]}
+                >
+                  {i === columns.length - 1 ? (
+                    <span class="placeholder-value">{column}</span>
+                  ) : (
+                    column
+                  )}
+                </th>
+              ))
+            }
+          </tr>
+        </thead>
+        <tbody>
+          {
+            rows.map((row) => (
+              <tr>
+                <th
+                  scope="row"
+                  class="border-b border-line-dark py-4 pr-4 align-top font-medium text-paper"
+                >
+                  {row.label}
+                </th>
+                {row.cells.map((cell, i) => (
+                  <td
+                    class:list={[
+                      "border-b border-line-dark py-4 pr-4 align-top leading-relaxed",
+                      i === row.cells.length - 1
+                        ? "font-medium text-paper"
+                        : "text-paper-soft",
+                    ]}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mt-10 text-base text-paper-soft">
+      I'm not the right fit for everyone. See who this is for below.
+    </p>
+  </div>
+</section>

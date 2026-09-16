@@ -1,0 +1,58 @@
+---
+import { site } from "../../config/site";
+import CTAButton from "../CTAButton.astro";
+---
+
+<section id="pricing" class="border-y border-line bg-white/40 py-16 md:py-24">
+  <div class="fade-in-section mx-auto max-w-[1100px] px-4 sm:px-6">
+    <h2
+      class="font-serif text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+    >
+      Which one sounds like you?
+    </h2>
+    <p class="mt-4 max-w-prose text-lg leading-relaxed text-ink-soft">
+      Pick the one that matches where you are. You can start anywhere and move
+      up when you're ready.
+    </p>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-2 md:gap-8">
+      {
+        site.offerings.map((offering) => (
+          <article class="flex flex-col border border-line bg-paper p-7 sm:p-9">
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+              {offering.label}
+            </p>
+            <h3 class="mt-4 font-serif text-2xl font-semibold leading-snug">
+              "{offering.headline}"
+            </h3>
+            <p class="mt-5 leading-relaxed text-ink-soft">
+              {offering.description}
+            </p>
+            <div class="mt-auto pt-8">
+              <p class="text-2xl font-semibold text-ink">
+                {offering.price}
+                {offering.priceNote && (
+                  <span class="mt-1 block text-base font-normal text-ink-soft">
+                    {offering.priceNote}
+                  </span>
+                )}
+              </p>
+              {offering.capNote && (
+                <p class="mt-3 text-sm leading-relaxed text-ink-soft">
+                  {offering.capNote}
+                </p>
+              )}
+              <div class="mt-6">
+                <CTAButton offering={offering.key} />
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <p class="mt-12 text-center text-lg text-ink-soft">
+      Not sure? Start with a Deal Call. Most people do.
+    </p>
+  </div>
+</section>

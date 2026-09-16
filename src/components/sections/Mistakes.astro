@@ -1,0 +1,48 @@
+---
+const mistakes = [
+  "Ordering a quality of earnings report before the seller has agreed on terms. $8,000 to $15,000, and the deal dies in week two.",
+  "Paying an M&A attorney to draft an LOI when a standard template would have done the job. $2,000 to $4,000.",
+  "Running the QoE and the legal review at the same time instead of QoE first. The deal dies on the numbers after the attorney has billed $6,000.",
+  "Picking a lender who was never going to do the deal, finding out in month three, and starting over.",
+  "Skipping a $500 lien or environmental search and paying for it at closing.",
+  "Overpaying by half a turn on the multiple because nobody told you what the business would actually trade for. On a $1.5M deal, that's $75,000.",
+];
+---
+
+<section class="py-16 md:py-24">
+  <div class="fade-in-section mx-auto max-w-[1100px] px-4 sm:px-6">
+    <h2
+      class="max-w-3xl font-serif text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+    >
+      Most first-time buyers don't lose money on the price. They lose it on the
+      order of operations.
+    </h2>
+    <p class="mt-4 text-lg text-ink-soft">
+      These are things I see regularly. All of them are avoidable.
+    </p>
+
+    <ul class="mt-10 flex max-w-[46rem] flex-col divide-y divide-line">
+      {
+        mistakes.map((mistake) => (
+          <li class="py-5 leading-relaxed text-ink">{mistake}</li>
+        ))
+      }
+    </ul>
+
+    <p class="mt-10 max-w-prose text-lg leading-relaxed text-ink-soft">
+      Your CPA, your attorney, the QoE firm, and your lender are all necessary
+      and they all cost real money. None of them is paid to tell you when to
+      bring in the next one, or when to stop. That's what I do. The right
+      people, in the right order, and a clear read on whether the deal is worth
+      spending on before the expensive part starts.
+    </p>
+
+    <div class="mt-12 max-w-md border-l-2 border-accent bg-white/60 py-6 pl-6 pr-6">
+      <p class="text-base text-ink">Six months of Quarterback: $3,000</p>
+      <p class="mt-2 text-base text-ink">Under Contract: $2,500</p>
+      <p class="mt-2 text-base text-ink">
+        One QoE report on a deal that was going to die anyway: $10,000
+      </p>
+    </div>
+  </div>
+</section>

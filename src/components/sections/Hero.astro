@@ -1,0 +1,51 @@
+---
+import { site } from "../../config/site";
+import CTAButton from "../CTAButton.astro";
+import PlaceholderImage from "../PlaceholderImage.astro";
+---
+
+<section id="top" class="pt-28 pb-16 md:pt-40 md:pb-24">
+  <div
+    class="mx-auto grid max-w-[1100px] items-center gap-10 px-4 sm:px-6 md:grid-cols-[7fr_5fr] md:gap-14"
+  >
+    <PlaceholderImage
+      alt={`${site.advisor.fullName}, ${site.advisor.title.toLowerCase()} in ${site.advisor.location}`}
+      ratio="4 / 5"
+      class="max-w-[320px] justify-self-center md:order-2 md:max-w-none md:justify-self-end"
+    />
+
+    <div class="md:order-1">
+      <p
+        class="text-sm font-medium uppercase tracking-[0.12em] text-accent"
+      >
+        Buy-side advisory for first-time buyers
+      </p>
+      <h1
+        class="mt-4 font-serif text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.4rem]"
+      >
+        A working business broker in your corner while you buy your first
+        business.
+      </h1>
+      <p class="mt-6 max-w-prose text-lg leading-relaxed text-ink-soft">
+        I list and sell small businesses for a living. I read the buyer emails,
+        decide who gets the financials, and watch deals close and fall apart
+        every week. I'll help you buy one without the mistakes I see over and
+        over. I don't find deals for you and I don't take a commission on your
+        deal.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-6">
+        <a
+          href="#pricing"
+          class="inline-block rounded-[6px] bg-accent px-6 py-3 text-base font-medium text-paper transition-colors hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        >
+          See how I can help
+        </a>
+        <CTAButton
+          offering="dealCall"
+          variant="text"
+          label="Not sure where to start? Book a Deal Call."
+        />
+      </div>
+    </div>
+  </div>
+</section>

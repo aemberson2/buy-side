@@ -1,0 +1,38 @@
+---
+const forYou = [
+  "First-time buyers, or people who bought once and want to do the next one right.",
+  "SBA-financed deals roughly $500,000 to $5,000,000.",
+  "You're willing to search listings yourself and sign an NDA.",
+  "You want an advisor, not someone to do it for you.",
+];
+
+const notForYou = [
+  "You want someone to find the business for you.",
+  "You're a private equity or search fund buyer with a deal team already.",
+  "You're not ready to look at a P&L.",
+  "You're looking for legal, tax, or investment advice. I'll tell you when you need those people, but I'm not them.",
+];
+---
+
+<section class="border-t border-line py-16 md:py-24">
+  <div
+    class="fade-in-section mx-auto grid max-w-[1100px] gap-12 px-4 sm:px-6 md:grid-cols-2 md:gap-16"
+  >
+    <div>
+      <h2 class="font-serif text-2xl font-semibold tracking-tight">
+        This is for you if
+      </h2>
+      <ul class="mt-6 flex flex-col gap-4 text-ink-soft">
+        {forYou.map((item) => <li class="leading-relaxed">{item}</li>)}
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-serif text-2xl font-semibold tracking-tight">
+        This is not for you if
+      </h2>
+      <ul class="mt-6 flex flex-col gap-4 text-ink-soft">
+        {notForYou.map((item) => <li class="leading-relaxed">{item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

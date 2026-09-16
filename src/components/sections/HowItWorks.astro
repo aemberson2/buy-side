@@ -1,0 +1,30 @@
+---
+const steps = [
+  "Pick the option that sounds like you.",
+  "Book or buy. You'll get a short intake asking for whatever I need (usually the listing and the financials).",
+  "Send it over and we get to work.",
+];
+---
+
+<section class="py-16 md:py-24">
+  <div class="fade-in-section mx-auto max-w-[1100px] px-4 sm:px-6">
+    <h2
+      class="font-serif text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+    >
+      Three steps. No application, no sales call.
+    </h2>
+
+    <ol class="mt-10 grid max-w-4xl gap-8 md:grid-cols-3">
+      {
+        steps.map((step, i) => (
+          <li class="flex flex-col gap-3">
+            <span class="font-serif text-3xl font-semibold text-accent">
+              {i + 1}
+            </span>
+            <p class="leading-relaxed text-ink-soft">{step}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

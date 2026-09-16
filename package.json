@@ -1,0 +1,20 @@
+{
+  "name": "buy-side-advisory",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "npm run og && astro build",
+    "preview": "astro preview",
+    "og": "node scripts/generate-og.mjs"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "astro": "^5.7.0",
+    "tailwindcss": "^4.1.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.0"
+  }
+}

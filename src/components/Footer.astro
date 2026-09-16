@@ -1,0 +1,81 @@
+---
+import { site } from "../config/site";
+
+const year = new Date().getFullYear();
+const { advisor } = site;
+
+const isPlaceholder = (value: string) => value.startsWith("[");
+---
+
+<footer class="bg-ink text-paper">
+  <div class="mx-auto max-w-[1100px] px-4 py-16 sm:px-6">
+    <p class="font-serif text-xl font-semibold">
+      <span class="placeholder-value">{site.name}</span>
+    </p>
+
+    <ul class="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm text-paper-soft">
+      <li>
+        {
+          isPlaceholder(advisor.email) ? (
+            <span class="placeholder-value">{advisor.email}</span>
+          ) : (
+            <a href={`mailto:${advisor.email}`} class="hover:text-paper">
+              {advisor.email}
+            </a>
+          )
+        }
+      </li>
+      <li>
+        {
+          isPlaceholder(advisor.phone) ? (
+            <span class="placeholder-value">{advisor.phone}</span>
+          ) : (
+            <a href={`tel:${advisor.phone}`} class="hover:text-paper">
+              {advisor.phone}
+            </a>
+          )
+        }
+      </li>
+      <li>
+        {
+          isPlaceholder(advisor.tiktok) ? (
+            <span class="placeholder-value">{advisor.tiktok}</span>
+          ) : (
+            <a
+              href={advisor.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-paper"
+            >
+              TikTok
+            </a>
+          )
+        }
+      </li>
+      <li>
+        {
+          isPlaceholder(advisor.linkedin) ? (
+            <span class="placeholder-value">{advisor.linkedin}</span>
+          ) : (
+            <a
+              href={advisor.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-paper"
+            >
+              LinkedIn
+            </a>
+          )
+        }
+      </li>
+    </ul>
+
+    <p class="mt-8 max-w-prose text-sm text-paper-soft">
+      Advisory services only. Not legal, tax, or investment advice. Not acting
+      as broker or agent in any transaction.
+    </p>
+    <p class="mt-4 text-sm text-paper-soft">
+      &copy; {year} <span class="placeholder-value">{site.name}</span>
+    </p>
+  </div>
+</footer>

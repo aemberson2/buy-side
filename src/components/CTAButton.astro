@@ -1,0 +1,37 @@
+---
+import {
+  resolveOfferingHref,
+  offeringHrefIsExternal,
+  site,
+  type OfferingKey,
+} from "../config/site";
+
+interface Props {
+  offering: OfferingKey;
+  /** Optional label override; defaults to the offering's ctaLabel from config. */
+  label?: string;
+  /** "primary" solid accent button or "text" text-link style. */
+  variant?: "primary" | "text";
+  class?: string;
+}
+
+const { offering, label, variant = "primary", class: className = "" } = Astro.props;
+
+const offeringData = site.offerings.find((o) => o.key === offering);
+const href = resolveOfferingHref(offering);
+const external = offeringHrefIsExternal(offering);
+const text = label ?? offeringData?.ctaLabel ?? "Get in touch";
+
+const primaryClasses =
+  "inline-block rounded-[6px] bg-accent px-6 py-3 text-base font-medium text-paper transition-colors hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+const textClasses =
+  "inline-block font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent";
+---
+
+<a
+  href={href}
+  class:list={[variant === "primary" ? primaryClasses : textClasses, className]}
+  {...external ? { target: "_blank", rel: "noopener noreferrer" } : {}}
+>
+  {text}
+</a>

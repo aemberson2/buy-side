@@ -1,0 +1,71 @@
+---
+import { site } from "../config/site";
+
+/**
+ * Renders the configured email capture form, or a plain form/mailto fallback
+ * when no provider is connected. Not rendered anywhere by default; email
+ * capture is intentionally out of the launch copy. Drop this component into a
+ * section when a list is wanted.
+ */
+const { emailCapture } = site.integrations;
+const mailto = `mailto:${site.advisor.email}?subject=${encodeURIComponent("Mailing list")}`;
+
+const inputClasses =
+  "w-full rounded-[6px] border border-line bg-white px-4 py-3 text-ink placeholder:text-ink-soft/70 focus:outline-2 focus:outline-accent";
+const buttonClasses =
+  "rounded-[6px] bg-accent px-6 py-3 font-medium text-paper transition-colors hover:bg-accent-hover";
+---
+
+{
+  emailCapture.provider === "convertkit" && emailCapture.embedId && (
+    <script
+      is:inline
+      async
+      data-uid={emailCapture.embedId}
+      src={`https://f.convertkit.com/${emailCapture.embedId}/index.js`}
+    />
+  )
+}
+
+{
+  (emailCapture.provider === "ghl" ||
+    emailCapture.provider === "resend" ||
+    (emailCapture.provider === "convertkit" && !emailCapture.embedId)) &&
+    emailCapture.formAction && (
+      <form
+        action={emailCapture.formAction}
+        method="post"
+        class="flex max-w-md flex-col gap-3 sm:flex-row"
+      >
+        <label class="sr-only" for="email-capture-input">
+          Email address
+        </label>
+        <input
+          id="email-capture-input"
+          type="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+          class={inputClasses}
+        />
+        <button type="submit" class={buttonClasses}>
+          Sign up
+        </button>
+      </form>
+    )
+}
+
+{
+  (emailCapture.provider === "none" ||
+    (!emailCapture.formAction && !emailCapture.embedId)) && (
+    <p class="text-ink-soft">
+      <a
+        href={mailto}
+        class="font-medium text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+      >
+        Email me
+      </a>{" "}
+      and I will keep you posted.
+    </p>
+  )
+}

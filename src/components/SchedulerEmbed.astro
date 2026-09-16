@@ -1,0 +1,66 @@
+---
+import { site } from "../config/site";
+
+/**
+ * Renders the configured scheduling vendor's embed, or a plain mailto fallback
+ * when no provider is connected. Vendor scripts load only when that provider
+ * is active. Not rendered anywhere by default; drop it into a section when an
+ * inline calendar is wanted instead of a link-out button.
+ */
+const { scheduling, } = site.integrations;
+const mailto = `mailto:${site.advisor.email}?subject=${encodeURIComponent("Deal Call")}`;
+---
+
+{
+  scheduling.provider === "calendly" && scheduling.url && (
+    <>
+      <div
+        class="calendly-inline-widget"
+        data-url={scheduling.url}
+        style="min-width:320px;height:700px;"
+      />
+      <script
+        is:inline
+        src="https://assets.calendly.com/assets/external/widget.js"
+        async
+      />
+    </>
+  )
+}
+
+{
+  scheduling.provider === "cal" && scheduling.url && (
+    <iframe
+      src={scheduling.url}
+      title="Book a call"
+      style="width:100%;height:700px;border:0;"
+      loading="lazy"
+    />
+  )
+}
+
+{
+  scheduling.provider === "ghl" && scheduling.url && (
+    <iframe
+      src={scheduling.url}
+      title="Book a call"
+      id={scheduling.embedId || undefined}
+      style="width:100%;height:700px;border:0;"
+      loading="lazy"
+    />
+  )
+}
+
+{
+  (scheduling.provider === "none" || !scheduling.url) && (
+    <p class="text-ink-soft">
+      Booking is not connected yet.{" "}
+      <a
+        href={mailto}
+        class="font-medium text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+      >
+        Email me to set up a Deal Call.
+      </a>
+    </p>
+  )
+}
