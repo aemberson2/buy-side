@@ -43,9 +43,9 @@ payments: {
 
 Note: if you set up a scheduling link (slot 1), the Deal Call button uses the scheduling link first and ignores `dealCallUrl`. Use whichever flow you prefer: book-then-pay or pay-then-book.
 
-## 3. Course
+## 3. The Playbook
 
-Where the Get the course button sends people. The course itself is hosted by the vendor, not on this site.
+Where the Get the Playbook button sends people. The Playbook itself (the video content) is hosted by the vendor, not on this site. In the config this slot is still named `course` because that's what the vendors call the product type.
 
 Find this block:
 
@@ -53,7 +53,7 @@ Find this block:
 course: { provider: "none", url: "" },
 ```
 
-- **Gumroad**: publish the course, copy the product URL (like `https://yourname.gumroad.com/l/course`), set `provider: "gumroad"` and paste the url.
+- **Gumroad**: publish the Playbook as a product, copy the product URL (like `https://yourname.gumroad.com/l/playbook`), set `provider: "gumroad"` and paste the url.
 - **Skool**: use your group's join or about URL with `provider: "skool"`.
 - **Kajabi** or **GHL memberships**: use the checkout or offer URL with `provider: "kajabi"` or `provider: "ghl"`.
 

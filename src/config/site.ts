@@ -86,14 +86,14 @@ export const site = {
   offerings: [
     {
       key: "course",
-      label: "The Course",
+      label: "The Playbook",
       headline:
         "I like the idea of buying a business someday, but I have no idea how it works or what it actually takes.",
       description:
         "How buying a small business actually works, from the broker's side of the table. The numbers, SBA loans, what brokers look for, what kills deals. Watch at your own pace.",
       price: "$27",
-      ctaLabel: "Get the course",
-      mailtoSubject: "The Course",
+      ctaLabel: "Get the Playbook",
+      mailtoSubject: "The Playbook",
     },
     {
       key: "dealCall",
@@ -154,7 +154,7 @@ export const site = {
     {
       question: "Do I need financials before a Deal Call?",
       answer:
-        "Yes. Sign the NDA, get the P&L and whatever the broker sends, then book. If all you have is the listing, the course will get you further than a call.",
+        "Yes. Sign the NDA, get the P&L and whatever the broker sends, then book. If all you have is the listing, the Playbook will get you further than a call.",
     },
     {
       question: "What if I don't end up buying anything?",
