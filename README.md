@@ -50,9 +50,7 @@ Everything still needing a real value is visibly highlighted on the rendered sit
 - [ ] `advisor.phone`: real phone number
 - [ ] `advisor.tiktok`: TikTok profile URL
 - [ ] `advisor.linkedin`: LinkedIn profile URL
-- [ ] `proof.dealsWorked`: number of deals worked (used in Why me and About)
-- [ ] `proof.buyerConversationsPerWeek`: number of buyer conversations per week
-- [ ] `proof.yearsBrokering`: years brokering (reserved for future copy; not rendered yet)
+- [ ] `proof.stats`: the three stat lines (currently Transworld $1B+, Minnesota office $50M+, hundreds of buyer conversations). Update the figures each year so they stay true, and confirm you're cleared to use the brokerage's name and numbers on a personal site.
 
 And two photos:
 

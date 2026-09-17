@@ -48,9 +48,21 @@ export const site = {
     linkedin: "[LINKEDIN URL]",
   },
   proof: {
-    dealsWorked: "[NUMBER]",
-    buyerConversationsPerWeek: "[NUMBER]",
-    yearsBrokering: "[NUMBER]",
+    brokerage: "Transworld Business Advisors",
+    stats: [
+      {
+        value: "$1B+",
+        text: "in businesses sold across Transworld last year",
+      },
+      {
+        value: "$50M+",
+        text: "closed by our Minnesota office last year",
+      },
+      {
+        value: "Hundreds",
+        text: "of buyer conversations every month",
+      },
+    ],
   },
   integrations: {
     // Scheduling: "calendly" | "cal" | "ghl" | "none"
