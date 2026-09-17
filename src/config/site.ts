@@ -113,7 +113,7 @@ export const site = {
       headline:
         "I've started looking at listings, but I don't know what to look for or what questions to ask.",
       description:
-        "Send me a real listing and its financials. I read everything before we talk. Then 45 minutes on the price, the red flags, and exactly what to ask the broker. Most people start here.",
+        "Send me a real listing and its financials. I read everything before we talk. Then 45 minutes on the price, the red flags, and exactly what to ask the broker. The Playbook is included. Most people start here.",
       price: "$150",
       ctaLabel: "Book a Deal Call",
       mailtoSubject: "Deal Call",
@@ -126,7 +126,8 @@ export const site = {
       description:
         "Your advisor while you search. Weekly calls, text and email in between, coaching before every broker conversation, and I review your LOI before it goes out. I help you build your team, keep you efficient, and save you money on things you don't need and mistakes you won't make. Cancel anytime.",
       price: "$500 a month",
-      capNote: "Only 10 clients at a time. If I'm full, you go on the waitlist.",
+      capNote:
+        "Only 5 clients at a time so quality stays high. If I'm full, you go on the waitlist.",
       ctaLabel: "Apply for Quarterback",
       mailtoSubject: "Quarterback",
     },
