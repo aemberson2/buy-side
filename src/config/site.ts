@@ -124,7 +124,7 @@ export const site = {
       headline:
         "I'm actively searching and I want someone in my corner while I do it.",
       description:
-        "Your advisor while you search. A call every other week, text and email in between, coaching before every broker conversation, and I review your LOI before it goes out. Cancel anytime.",
+        "Your advisor while you search. Weekly calls, text and email in between, coaching before every broker conversation, and I review your LOI before it goes out. I help you build your team, keep you efficient, and save you money on things you don't need and mistakes you won't make. Cancel anytime.",
       price: "$500 a month",
       capNote: "Only 10 clients at a time. If I'm full, you go on the waitlist.",
       ctaLabel: "Apply for Quarterback",
