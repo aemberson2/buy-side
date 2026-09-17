@@ -48,11 +48,10 @@ export const site = {
     linkedin: "[LINKEDIN URL]",
   },
   proof: {
-    brokerage: "Transworld Business Advisors",
     stats: [
       {
         value: "$1B+",
-        text: "in businesses sold across Transworld last year",
+        text: "in businesses sold by my brokerage nationwide last year",
       },
       {
         value: "$50M+",
