@@ -90,7 +90,7 @@ export const site = {
       headline:
         "I like the idea of buying a business someday, but I have no idea how it works or what it actually takes.",
       description:
-        "How buying a small business really works, explained from the broker's side of the table. What a listing is, how the numbers work, how SBA loans work, what brokers look for in a buyer, what kills deals. Watch it on your couch, at your own pace, and come back when you're ready to look at real listings.",
+        "How buying a small business actually works, from the broker's side of the table. The numbers, SBA loans, what brokers look for, what kills deals. Watch at your own pace.",
       price: "$27",
       ctaLabel: "Get the course",
       mailtoSubject: "The Course",
@@ -101,7 +101,7 @@ export const site = {
       headline:
         "I've started looking at listings, but I don't know what to look for or what questions to ask.",
       description:
-        "Send me the listing and the financials on a business you're looking at. I'll read everything before we talk, then we spend 45 minutes on whether the price is fair, what's off, what to ask the broker and the owner, and whether it's worth chasing. Most people start here.",
+        "Send me a real listing and its financials. I read everything before we talk. Then 45 minutes on the price, the red flags, and exactly what to ask the broker. Most people start here.",
       price: "$150",
       ctaLabel: "Book a Deal Call",
       mailtoSubject: "Deal Call",
@@ -112,10 +112,9 @@ export const site = {
       headline:
         "I'm actively searching and I want someone in my corner while I do it.",
       description:
-        "I'm your advisor while you search. Every deal you're serious about, we talk through. A call every other week, text and email in between, coaching before every broker and seller conversation, and I review your LOI before it goes out. Cancel anytime.",
+        "Your advisor while you search. A call every other week, text and email in between, coaching before every broker conversation, and I review your LOI before it goes out. Cancel anytime.",
       price: "$500 a month",
-      capNote:
-        "I take 10 of these at a time so I can actually pay attention. If I'm full, you'll go on a waitlist and Deal Calls stay open.",
+      capNote: "Only 10 clients at a time. If I'm full, you go on the waitlist.",
       ctaLabel: "Apply for Quarterback",
       mailtoSubject: "Quarterback",
     },
@@ -125,7 +124,7 @@ export const site = {
       headline:
         "I found the one and I'm under contract. Now I need to get it closed without blowing it up.",
       description:
-        "From signed LOI to closing. I get you connected with the right CPA, attorney, QoE firm, and lender, lay out what diligence needs to cover and in what order, check in weekly, and get on the phone when something comes up. Most deals don't die on the numbers. They die on the process.",
+        "Signed LOI to closing. The right CPA, attorney, QoE firm, and lender, in the right order, with weekly check-ins. Most deals don't die on the numbers. They die on the process.",
       price: "$2,500 flat.",
       priceNote: "$1,500 if you're already a Quarterback client.",
       ctaLabel: "Start Under Contract",
@@ -136,7 +135,7 @@ export const site = {
     {
       question: "Do you find deals for me?",
       answer:
-        "No, and that's on purpose. There are thousands of businesses listed publicly on BizBuySell and the other marketplaces at any given moment. Finding deals is not the hard part. I help you tell which ones are worth your time, get the broker to take you seriously, and work the process. If you want off-market deals sourced for you, that's a different service, it costs many thousands of dollars, and I'm not it.",
+        "No. Thousands of listings are public on BizBuySell and the other marketplaces. Finding them is not the hard part. I help you spot the ones worth your time and work the process. Want off-market deals sourced for you? That's a different service and it costs many thousands of dollars.",
     },
     {
       question: "Can I just buy a Deal Call and nothing else?",
